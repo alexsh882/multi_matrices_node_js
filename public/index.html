@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MULTIPLICAR MATRICES</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  </head>
+
+  <body>
+    <header class="bg-gray-600 text-white text-center py-5">
+      <h1 class="text-3xl">Multiplicar Matrices</h1>
+    </header>
+    <main class="my-5 mx-auto p-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <h2 class="text-2xl">Primera Matriz</h2>
+          <label for="number-row-1">
+            <p>Ingrese el número de filas</p>
+            <input
+              type="number"
+              id="number-row-1"
+              min="1"
+              value="1"
+              class="block p-2 w-full rounded-md border-0 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+            />
+          </label>
+          <label for="number-col-1">
+            <p>Ingrese el número de columnas</p>
+            <input
+              type="number"
+              id="number-col-1"
+              min="1"
+              value="1"
+              class="block p-2 w-full rounded-md border-0 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+            />
+          </label>
+        </div>
+
+        <div>
+          <h2 class="text-2xl">Segunda Matriz</h2>
+          <label for="number-row-2">
+            <p>Ingrese el número de filas</p>
+            <input
+              type="number"
+              id="number-row-2"
+              min="1"
+              value="1"
+              class="block p-2 w-full rounded-md border-0 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+            />
+          </label>
+          <label for="number-col-2">
+            <p>Ingrese el número de columnas</p>
+            <input
+              type="number"
+              id="number-col-2"
+              min="1"
+              value="1"
+              class="block p-2 w-full rounded-md border-0 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+            />
+          </label>
+        </div>
+        <button
+          type="button"
+          id="generate-matrices"
+          class="inline-flex w-full md:w-min items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        >
+          <svg
+            class="-ml-0.5 mr-1.5 h-5 w-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <span class="whitespace-nowrap">Generar Matrices</span>
+        </button>
+      </div>
+      <form id="form-to-calculate" class="my-6">
+        <h2 id="subtitle-matrix"></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          <div>
+            <div class="grid m-2 w-min-content" id="matrix-1"></div>
+          </div>
+          <div>
+            <div class="grid m-2 w-min-content" id="matrix-2"></div>
+          </div>
+        </div>
+        <div id="button-submit">
+          <button
+            type="submit"
+            class="inline-flex w-full md:w-min items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >
+            <svg
+              class="-ml-0.5 mr-1.5 h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <span class="whitespace-nowrap">Multiplicar</span>
+          </button>
+        </div>
+      </form>
+      <div class="grid max-w-80" id="matriz-generada"></div>
+    </main>
+    <script>
+      tailwind.config = {
+        content: ["./**/*.{html,js}"],
+        theme: {
+          extend: {},
+        },
+        plugins: [],
+      };
+    </script>
+    <script src="./public/js/calculate.js"></script>
+  </body>
+</html>
